@@ -10,3 +10,4 @@ Pods/
 .DS_Store
 npm-debug.log*
 .validation/
+/.idea/vcs.xml

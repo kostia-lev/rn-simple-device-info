@@ -28,30 +28,22 @@ Android is linked automatically. Rebuild the native app after installing this pa
 
 ```ts
 import {
-  getAppInfo,
-  getAppName,
-  getAppVersion,
+  getApplicationName,
   getBuildNumber,
+  getVersion,
 } from 'rn-simple-device-info';
 
-const name = getAppName();
-const version = getAppVersion();
+const name = getApplicationName();
+const version = getVersion();
 const build = getBuildNumber();
-
-const info = getAppInfo();
-// {
-//   appName: 'My App',
-//   appVersion: '1.2.0',
-//   buildNumber: '42',
-// }
 ```
 
 All functions are synchronous and return strings.
 
 | Function | Android | iOS |
 | --- | --- | --- |
-| `getAppName()` | Application label | `CFBundleDisplayName`, falling back to `CFBundleName` |
-| `getAppVersion()` | `versionName` | `CFBundleShortVersionString` |
+| `getApplicationName()` | Application label | `CFBundleDisplayName`, falling back to `CFBundleName` |
+| `getVersion()` | `versionName` | `CFBundleShortVersionString` |
 | `getBuildNumber()` | `versionCode` | `CFBundleVersion` |
 
 The Android build number is returned as a string so large `longVersionCode` values cannot lose precision in JavaScript.

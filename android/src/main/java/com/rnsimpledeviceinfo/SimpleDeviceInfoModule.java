@@ -22,7 +22,7 @@ public final class SimpleDeviceInfoModule extends NativeSimpleDeviceInfoSpec {
   }
 
   @Override
-  public String getAppName() {
+  public String getApplicationName() {
     ReactApplicationContext context = getReactApplicationContext();
     PackageManager packageManager = context.getPackageManager();
     ApplicationInfo applicationInfo = context.getApplicationInfo();
@@ -30,7 +30,7 @@ public final class SimpleDeviceInfoModule extends NativeSimpleDeviceInfoSpec {
   }
 
   @Override
-  public String getAppVersion() {
+  public String getVersion() {
     String versionName = getPackageInfo().versionName;
     return versionName == null ? "" : versionName;
   }

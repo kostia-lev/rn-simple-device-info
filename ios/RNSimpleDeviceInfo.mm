@@ -2,7 +2,7 @@
 
 @implementation RNSimpleDeviceInfo
 
-- (NSString *)getAppName
+- (NSString *)getApplicationName
 {
   NSBundle *bundle = [NSBundle mainBundle];
   NSString *appName = [bundle objectForInfoDictionaryKey:@"CFBundleDisplayName"];
@@ -14,7 +14,7 @@
   return appName.length > 0 ? appName : [[NSProcessInfo processInfo] processName];
 }
 
-- (NSString *)getAppVersion
+- (NSString *)getVersion
 {
   NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
   return version ?: @"";

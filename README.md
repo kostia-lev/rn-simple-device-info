@@ -1,6 +1,7 @@
 # rn-simple-device-info
 
 A small, synchronous React Native Turbo Module that reads the current app's name, version, and build number on Android and iOS.
+Made to replace rarely updated https://www.npmjs.com/package/react-native-device-info.
 
 ## Requirements
 

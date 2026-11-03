@@ -1,0 +1,12 @@
+node_modules/
+lib/
+generated/
+android/.gradle/
+android/build/
+android/local.properties
+ios/build/
+Pods/
+*.xcworkspace
+.DS_Store
+npm-debug.log*
+.validation/

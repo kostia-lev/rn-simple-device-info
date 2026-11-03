@@ -1,0 +1,35 @@
+def safeExtGet(String property, Object fallback) {
+  return rootProject.ext.has(property) ? rootProject.ext.get(property) : fallback
+}
+
+apply plugin: "com.android.library"
+apply plugin: "com.facebook.react"
+
+android {
+  namespace "com.rnsimpledeviceinfo"
+  compileSdkVersion safeExtGet("compileSdkVersion", 36)
+
+  defaultConfig {
+    minSdkVersion safeExtGet("minSdkVersion", 24)
+    targetSdkVersion safeExtGet("targetSdkVersion", 36)
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+    }
+  }
+
+  lint {
+    abortOnError true
+  }
+}
+
+repositories {
+  google()
+  mavenCentral()
+}
+
+dependencies {
+  implementation "com.facebook.react:react-android"
+}

@@ -1,6 +1,6 @@
 {
   "name": "rn-simple-device-info",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small React Native Turbo Module for reading the app name, version, and build number on Android and iOS.",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
